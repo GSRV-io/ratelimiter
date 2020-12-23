@@ -14,3 +14,18 @@ else /* do stuff */;
 ```
 Please make sure to check LICENSE before using.
 Commercial use is prohibited.
+
+### installation
+Clone the repository in your desired folder.
+```
+git clone https://github.com/GSRV-io/ratelimiter.git .
+```
+Run the following SQL query to initialise the table.
+```sql
+CREATE TABLE `ratelimits` (
+  `ip` varchar(256) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  `service` varchar(128) NOT NULL DEFAULT 'general',
+  `requests` int(11) NOT NULL DEFAULT 1,
+  `time` datetime NOT NULL DEFAULT utc_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+```
