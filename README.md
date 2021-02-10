@@ -29,4 +29,4 @@ CREATE TABLE `ratelimits` (
   `time` datetime NOT NULL DEFAULT utc_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 ```
-The code looks for a variable named `$conn` that defines a MySQL connection. The table must be available within this connection. To use a variable with different name, repace all occurrances of `$conn` in `ratelimiter.php` with your variable.
+The code looks for a variable named `$conn` that defines a MySQL connection. The table must be available within this connection. To use a variable with a different name, replace all occurrances of `$conn` in `ratelimiter.php` with your variable.
